@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  MiWiFi Chinese To English Translation With JS
 // @author       Saiful Islam
-// @match        http://*/*
+// @match        http://miwifi.com/*
 // @grant        none
 // ==/UserScript==
 function transl(){
