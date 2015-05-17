@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MiWiFi in English
 // @namespace    http://saiful.im/
-// @version      0.1
+// @version      0.4
 // @description  MiWiFi Chinese To English Translation With JS
 // @author       Saiful Islam
 // @match        http://miwifi.com/*
@@ -10,17 +10,30 @@
 function transl(){
 console.log("Translating...");
 var str = document.documentElement.innerHTML;
-var str = replaceAll("体检过程大约需要几秒至几分钟不等(视硬盘情况而定)", " The examination process takes about a few seconds to several minutes (depending on the hard disk case may be)", str);
-var str = replaceAll("体检过程中涉及到硬盘的功能将暂时无法使用(插件、文件读写等)", " The examination process functions related to the hard disk will be temporarily unavailable (plug-ins, document literacy, etc.)", str);
+var str = replaceAll("请手工选择需要的工作模式", "Manually select the desired operating mode", str);
+var str = replaceAll("普通路由器工作模式\（创建一个无线网络", "Ordinary router mode", str);
+var str = replaceAll("有线中继工作模式\（扩展现有的网络", "Wired relay operating modes", str);
+var str = replaceAll("您所访问的站点内部发生错误", "The site you trying to access has internal error!", str);
+var str = replaceAll("你访问的页面地址出错了\(404\)", "Ops, Page Not Found!", str);
+var str = replaceAll("你访问的页面", "Your Accessed Page ", str);
+var str = replaceAll("出错了", " Does't Exist! ", str);
+var str = replaceAll("网络正常，", "Internet Working Properly , ", str);
+
+var str = replaceAll("路由器重启需要等待十几秒或更多时间，重启过程中将会断开网络连接，稍后将自动重新连接网络。", "Reboot the router to wait ten seconds or more time, the restart process will be disconnected from the network, the network will automatically reconnect later.", str);
+var str = replaceAll("关闭路由器将断开其他设备的数据访问和网络连接，之后便可以安全的断开电源。\（再次启动需要手工连接电源\）", "Turn off the router will disconnect other equipment data access and network connection, after they can safely disconnect the power. (Start again need to manually connect the power supply)", str);
+var str = replaceAll("关闭路由器", "Shutdown Router", str);
+var str = replaceAll("体检过程大约需要几秒至几分钟不等\(视硬盘情况而定\)", " The examination process takes about a few seconds to several minutes (depending on the hard disk case may be)", str);
+var str = replaceAll("体检过程中涉及到硬盘的功能将暂时无法使用\(插件、文件读写等\)", " The examination process functions related to the hard disk will be temporarily unavailable (plug-ins, document literacy, etc.)", str);
 var str = replaceAll("恢复出厂设置", "Restore factory settings", str);
 var str = replaceAll("经过检测，建议使用", "After testing, it is recommended ", str);
-var str = replaceAll("方式(系统自动分配IP地址)", "Mode (the system automatically assign IP addresses)", str);
+var str = replaceAll("方式\(系统自动分配IP地址\)", "Mode (the system automatically assign IP addresses)", str);
 var str = replaceAll("清除硬盘中的全部用户数据，例如视频或图片", "Remove the hard drive of all user data, such as video or picture", str);
 var str = replaceAll("建议正在使用SSH连接路由器的用户不要开启此功能", "We recommend using SSH to connect users to the router to open this feature", str);
 var str = replaceAll("开启此功能后小米路由器将在硬盘非工作状态下使其进入休眠状态，以延长硬盘使用寿命。", "Open this feature MiWiFi router will make it hard to sleep at a non-working state to extend drive life.", str);
 var str = replaceAll("格式化硬盘", "Format hard disk", str);
 var str = replaceAll("你的浏览器禁止了Javascript功能，会造成无法使用系统进行路由器管理，请开启。", "Your browser disabled Javascript function will cause the system can not be used for router management.", str);
-var str = replaceAll("小米路由器", "MiWiFi Router", str);
+
+
 var str = replaceAll("路由状态", "Routing status", str);
 var str = replaceAll("存储状态", "Storage status", str);
 var str = replaceAll("常用设置", "Common Settings", str);
@@ -75,7 +88,7 @@ var str = replaceAll("位置", "Position", str);
 var str = replaceAll("系统版本", "System Version", str);
 var str = replaceAll("开发版", "Developer Edition", str);
 var str = replaceAll("MAC地址", " MAC address ", str);
-var str = replaceAll("小米路由器", "MiWiFi Router", str);
+
 var str = replaceAll("官方网站", "Official Website", str);
 var str = replaceAll("官方微博", "Official blog", str);
 var str = replaceAll("官方微信", "Official micro letter ", str);
@@ -106,7 +119,7 @@ var str = replaceAll("1. 您的硬盘目前状态正佳，运转正常，性能�
 var str = replaceAll("开始硬盘体检", "Start hard physical examination", str);
 
 // Comom
-var str = replaceAll("小米路由器", "MiWiFi Router", str);
+
 var str = replaceAll("设置", " Set up", str);
 var str = replaceAll("上网设置", "Internet settings", str);
 var str = replaceAll("安全中心", "Security Center", str);
@@ -233,7 +246,6 @@ var str = replaceAll("无加密(允许所有人连接)", "No Encryption (Open)",
 //SMALL
 var str = replaceAll("请输入", "Please Enter ", str);
 var str = replaceAll("器管理", "", str);
-var str = replaceAll("地址", " Address", str);
 var str = replaceAll("当前", "Current", str);
 var str = replaceAll("路由", "Router ", str);
 var str = replaceAll("状态", "Status", str);
@@ -244,8 +256,8 @@ var str = replaceAll("小时", " hour ", str);
 var str = replaceAll("分", " minutes ", str);
 var str = replaceAll("天", " Day", str);
 var str = replaceAll("秒", " seconds", str);
-var str = replaceAll("重启", "Reboot", str);
-var str = replaceAll("关机", "Shutdown", str);
+var str = replaceAll("重启", "Reboot ", str);
+var str = replaceAll("关机", "Shutdown ", str);
 var str = replaceAll("注销", "Logout", str);
 var str = replaceAll("保存", "Save", str);
 var str = replaceAll("已用", "Used ", str);
@@ -264,7 +276,7 @@ var str = replaceAll("确定", "OK", str);
 var str = replaceAll("取消", "Cancel", str);
 var str = replaceAll("开关", "Switch", str);
 var str = replaceAll("开启", "On", str);
-var str = replaceAll("关闭", "Off", str);
+var str = replaceAll("关闭", "Off ", str);
 var str = replaceAll("名称", "Name", str);
 var str = replaceAll("加密方式", "Encryption", str);
 var str = replaceAll("密码", "Password", str);
@@ -291,7 +303,7 @@ var str = replaceAll("本机", "PC", str);
 var str = replaceAll("秒", "Second", str);
 var str = replaceAll("系统", "System ", str);
 var str = replaceAll("局域网", "LAN ", str);
-var str = replaceAll("上网", "Internet access ", str);
+var str = replaceAll("上网", " Internet access ", str);
 var str = replaceAll("修改", "Modify ", str);
 var str = replaceAll("租约", "Lease ", str);
 var str = replaceAll("成功正在", "Success ", str);
@@ -303,6 +315,29 @@ var str = replaceAll("方式", "", str);
 var str = replaceAll("管理终端的", "", str);
 var str = replaceAll("可以手动更改为", "", str);
 var str = replaceAll("配", "", str);
+var str = replaceAll("小米路由器", "MiWiFi Router", str);
+var str = replaceAll("地址", " Address", str);
+var str = replaceAll("技术支持", " Technical Support", str);
+var str = replaceAll("使用", "Use ", str);
+var str = replaceAll("置", " Set ", str);
+var str = replaceAll("应用", "Apply ", str);
+var str = replaceAll("账号", "User ID", str);
+var str = replaceAll("网关", "Gateway", str);
+var str = replaceAll("必填", "Required", str);
+var str = replaceAll("下一步", "Next", str);
+var str = replaceAll("提示信息", "Message", str);
+var str = replaceAll("成功", " Success", str);
+var str = replaceAll("确认", "Confirm", str);
+var str = replaceAll("切换", "Switching", str);
+
+
+//Search
+var str = replaceAll("试试搜索", "Search", str);
+var str = replaceAll("百度一下", "Baidu!", str);
+var str = replaceAll("客户端", " Client", str);
+var str = replaceAll("器", "", str);
+
+// var str = replaceAll("", "");
 document.open('text/html');document.write(str);document.close();
 }
 
@@ -313,6 +348,9 @@ function replaceAll(find, replace, str) {
 function errorFix()
 {
 	console.log("Fixing CSS...");
+	$(".title img").attr('src', 'http://i1157.photobucket.com/albums/p593/ibot_zone/new_mifi_zpshuq77f9f.png');
+	$(".recomsites").hide();
+	$(".hotwords").hide();
 	$("#nav li a ").css( "font-size", 16);
 	$(".dropmenu").css( "width", 160);
 	$("#trafficChart > svg:nth-child(2)").remove();
@@ -322,16 +360,21 @@ function errorFix()
 	$("#piechart > svg:nth-child(2)").remove();
 	$("#piechartcat > svg:nth-child(2)").remove();
 	$("#ioStatus > svg:nth-child(2)").remove();
-	$('input:text').css('height', 40);
-	$('input:password').css('height', 40);
-	$('.form-item .ipt-text').css('width', 330);
-	$('.form-item-select .k').css('width', 300);
-	$('.form-item .k').css('width', 300);
+	$('input:text').css('height', 40, 'important');
+	$('input:text').css('width', 330, 'important');
+	$('input:password').css('height', 40, 'important');
+	$('.form-item .ipt-text').css('width', 330, 'important');
+	$('.form-item-select .k').css('width', 300, 'important');
+	$('.form-item .k').css('width', 300, 'important');
 	$( "<div align=\"center\" style=\"color: #8cb9f0; text-decoration: none;\"><p>Translated By: <a style=\"text-decoration: none; color: #8cb9f0;\" href=\"http://saiful.im/\">Saiful Islam</a></p></div>" ).insertAfter( "#ft" );
+	
+
 	clearInterval(document.intR);
 }
 
 $( document ).ready(function() {
 	transl();
-	document.intR = setInterval(function(){ errorFix();  }, 1000);
 });
+
+
+document.intR = setInterval(function(){ errorFix();  }, 1000);
