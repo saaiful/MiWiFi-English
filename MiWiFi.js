@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MiWiFi in English
 // @namespace    http://saiful.im/
-// @version      0.5
+// @version      0.6
 // @description  MiWiFi Chinese To English Translation With JS
 // @author       Saiful Islam
 // @match        http://miwifi.com/*
@@ -418,16 +418,29 @@ function fixModal(){
 }
 
 $(document).bind('DOMNodeInserted', function(e) {
-	var height = (window.innerHeight - $(".panel").height())/2;
-	if($('.panel').height() != height && $(".panel").height()!=0 )
-	{ 
+	if($('.panel').length==1 )
+	{
+		var delay = ( function() {
+		    var timer = 0;
+		    return function(callback, ms) {
+		        clearTimeout (timer);
+		        timer = setTimeout(callback, ms);
+		    };
+		})();
 		delay(function(){
 		   fixModal();
-		}, 400 );
+		}, 100 );
 	}
 
 	if($('input:text').width() != 330 )
 	{ 
+		var delay = ( function() {
+		    var timer = 0;
+		    return function(callback, ms) {
+		        clearTimeout (timer);
+		        timer = setTimeout(callback, ms);
+		    };
+		})();
 		delay(function(){
 		   errorFix();
 		}, 50 );
