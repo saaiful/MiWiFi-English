@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MiWiFi in English
 // @namespace    http://saiful.im/
-// @version      0.6
+// @version      0.7
 // @description  MiWiFi Chinese To English Translation With JS
 // @author       Saiful Islam
 // @match        http://miwifi.com/*
@@ -22,6 +22,9 @@ var str = replaceAll("你访问的页面地址出错了\(404\)", "Ops, Page Not 
 var str = replaceAll("你访问的页面", "Your Accessed Page ", str);
 var str = replaceAll("出错了", " Does't Exist! ", str);
 var str = replaceAll("网络正常，", "Internet Working Properly , ", str);
+var str = replaceAll("对不起，小米路由器出现网络连接问题无法打开网页", "Sorry , Limited Internet Connectivity.", str);
+var str = replaceAll("小米路由器技术支持", "MiWiFi router support", str);
+var str = replaceAll("立即进行网络诊断", "Test Network Now", str);
 
 var str = replaceAll("路由器重启需要等待十几秒或更多时间，重启过程中将会断开网络连接，稍后将自动重新连接网络。", "Reboot the router to wait ten seconds or more time, the restart process will be disconnected from the network, the network will automatically reconnect later.", str);
 var str = replaceAll("关闭路由器将断开其他设备的数据访问和网络连接，之后便可以安全的断开电源。\（再次启动需要手工连接电源\）", "Turn off the router will disconnect other equipment data access and network connection, after they can safely disconnect the power. (Start again need to manually connect the power supply)", str);
@@ -358,6 +361,10 @@ var str = replaceAll("中", " Medium ", str);
 var str = replaceAll("先级较高的设备", " higher priority device ", str);
 var str = replaceAll("体验流畅", " To experience smooth ", str);
 var str = replaceAll("时，建议无需OnQoS功能", ", It is recommended to function without QoS", str);
+var str = replaceAll("恭喜", ",Congratulations", str);
+var str = replaceAll("连接正常", " connection is normal", str);
+var str = replaceAll("诊断", " Diagnosis", str);
+var str = replaceAll("未发现错误", " No Errors Found", str);
 
 
 
@@ -367,6 +374,7 @@ var str = replaceAll("百度一下", "Baidu!", str);
 var str = replaceAll("客户端", " Client", str);
 var str = replaceAll("器", "", str);
 var str = replaceAll("下", "", str);
+var str = replaceAll("后", "", str);
 
 // var str = replaceAll("", "");
 document.open('text/html');document.write(str);document.close();
