@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        MiWiFi
 // @namespace   saaiful
-// @description MiWiFi English
+// @description MiWiFi English Firefox (Beta)
 // @version     1
 // @grant       none
 // ==/UserScript==
